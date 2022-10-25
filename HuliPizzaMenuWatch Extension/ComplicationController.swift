@@ -6,15 +6,21 @@
 //
 
 import ClockKit
+import SwiftUI
 
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
+    let stages = Stages()
     
     // MARK: - Complication Configuration
 
     func getComplicationDescriptors(handler: @escaping ([CLKComplicationDescriptor]) -> Void) {
         let descriptors = [
-            CLKComplicationDescriptor(identifier: "complication", displayName: "HuliPizzaMenu", supportedFamilies: CLKComplicationFamily.allCases)
+            CLKComplicationDescriptor(identifier: "complication",
+                                      displayName: "HuliPizzaMenu",
+                                      supportedFamilies: CLKComplicationFamily.allCases),
+            
+            CLKComplicationDescriptor(identifier: "custom", displayName: "Pizza Custom", supportedFamilies: [.graphicExtraLarge, .graphicRectangular])
             // Multiple complication support can be added here with more descriptors
         ]
         
@@ -30,7 +36,10 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getTimelineEndDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
         // Call the handler with the last entry date you can currently provide or nil if you can't support future timelines
-        handler(nil)
+        
+        
+        
+        handler(now.addingTimeInterval(stages.totalTime))
     }
     
     func getPrivacyBehavior(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationPrivacyBehavior) -> Void) {
@@ -42,18 +51,24 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
         // Call the handler with the current timeline entry
-        handler(nil)
+        let timeLineEntry = createTimeLineEntry(for: complication, date: Date(), stage: 0)
+        handler(timeLineEntry)
     }
     
     func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
         // Call the handler with the timeline entries after the given date
-        handler(nil)
+        
+        
+        
+        handler(createOrderTimeline(for: complication))
     }
 
     // MARK: - Sample Templates
     
     func getLocalizableSampleTemplate(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTemplate?) -> Void) {
         // This method will be called once per supported complication, and the results will be cached
-        handler(nil)
+        var template = createComplicationTemplate(for: complication, stage: 0)
+        
+        handler(template)
     }
 }

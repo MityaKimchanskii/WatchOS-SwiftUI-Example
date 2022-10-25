@@ -1,8 +1,9 @@
 {
+    "apns-push-type": "alert",
     "aps": {
         "alert": {
             "body": "Test message",
-            "title": "Optional title",
+            "title": "Pizza",
             "subtitle": "Optional subtitle"
         },
         "category": "myCategory",

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ClockKit
 
 struct DetailView: View {
     
@@ -14,6 +15,17 @@ struct DetailView: View {
     @Binding var selectedRow: Int!
     @State private var isZooming = false
     @State private var isRatingPresented = false
+    
+    func reloadTimeLine() {
+        now = Date()
+        let server = CLKComplicationServer.sharedInstance()
+        
+        if let active = server.activeComplications {
+            for complication in active {
+                server.reloadTimeline(for: complication)
+            }
+        }
+    }
     
     var body: some View {
         ScrollView {
@@ -32,14 +44,25 @@ struct DetailView: View {
                     .sheet(isPresented: $isZooming) {
                         ZoomView(item: item)
                     }
-                Button {
+//                Button {
+//
+//                    reloadTimeLine()
+//
+//                    WKInterfaceDevice.current().play(.success)
+//                    self.selectedItem = self.item.id
+//                    self.selectedRow = nil
+//                } label: {
+//                    Text("Order")
+//                }
+    //            ScrollView {
+                OrderButton {
+                    
+                    reloadTimeLine()
+                    
                     WKInterfaceDevice.current().play(.success)
                     self.selectedItem = self.item.id
                     self.selectedRow = nil
-                } label: {
-                    Text("Order")
-                }
-    //            ScrollView {
+                } 
                     Text(item.description)
     //            }
                 

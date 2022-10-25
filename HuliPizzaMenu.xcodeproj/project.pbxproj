@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B90CFF829078DA300B23643 /* Stages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90CFF629078DA300B23643 /* Stages.swift */; };
+		3B90CFF929078DA300B23643 /* ComplicationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90CFF729078DA300B23643 /* ComplicationControllerExtension.swift */; };
+		3B90CFFB29079CB100B23643 /* XLargeCircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90CFFA29079CB100B23643 /* XLargeCircularView.swift */; };
+		3B90CFFD2907A1C700B23643 /* GraphicRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90CFFC2907A1C700B23643 /* GraphicRectangleView.swift */; };
+		3B90CFFF2907A53D00B23643 /* PizzaNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90CFFE2907A53D00B23643 /* PizzaNotificationView.swift */; };
+		3B90D0012907A60400B23643 /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90D0002907A60400B23643 /* OrderButton.swift */; };
 		3BB3EC6B2906FF8D00A37002 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB3EC6A2906FF8D00A37002 /* DetailView.swift */; };
 		3BB3EC6D2907056800A37002 /* Raitings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB3EC6C2907056800A37002 /* Raitings.swift */; };
 		3BB3EC6F2907061B00A37002 /* RaitingsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB3EC6E2907061B00A37002 /* RaitingsDetailView.swift */; };
@@ -79,6 +85,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B90CFF629078DA300B23643 /* Stages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stages.swift; sourceTree = "<group>"; };
+		3B90CFF729078DA300B23643 /* ComplicationControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplicationControllerExtension.swift; sourceTree = "<group>"; };
+		3B90CFFA29079CB100B23643 /* XLargeCircularView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLargeCircularView.swift; sourceTree = "<group>"; };
+		3B90CFFC2907A1C700B23643 /* GraphicRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicRectangleView.swift; sourceTree = "<group>"; };
+		3B90CFFE2907A53D00B23643 /* PizzaNotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaNotificationView.swift; sourceTree = "<group>"; };
+		3B90D0002907A60400B23643 /* OrderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
 		3BB3EC6A2906FF8D00A37002 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		3BB3EC6C2907056800A37002 /* Raitings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Raitings.swift; sourceTree = "<group>"; };
 		3BB3EC6E2907061B00A37002 /* RaitingsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaitingsDetailView.swift; sourceTree = "<group>"; };
@@ -155,11 +167,17 @@
 				E141FE2424CF41F70011CF6F /* ExtensionDelegate.swift */,
 				E141FE2624CF41F70011CF6F /* NotificationController.swift */,
 				E141FE2824CF41F70011CF6F /* NotificationView.swift */,
+				3B90CFFE2907A53D00B23643 /* PizzaNotificationView.swift */,
+				3B90D0002907A60400B23643 /* OrderButton.swift */,
 				E141FE2A24CF41F70011CF6F /* ComplicationController.swift */,
+				3B90CFF729078DA300B23643 /* ComplicationControllerExtension.swift */,
+				3B90CFFA29079CB100B23643 /* XLargeCircularView.swift */,
+				3B90CFF629078DA300B23643 /* Stages.swift */,
 				E141FE2C24CF41F80011CF6F /* Assets.xcassets */,
 				E141FE3124CF41F80011CF6F /* Info.plist */,
 				E141FE3224CF41F80011CF6F /* PushNotificationPayload.apns */,
 				E141FE2E24CF41F80011CF6F /* Preview Content */,
+				3B90CFFC2907A1C700B23643 /* GraphicRectangleView.swift */,
 			);
 			path = "HuliPizzaMenuWatch Extension";
 			sourceTree = "<group>";
@@ -353,12 +371,18 @@
 				3BB3EC6F2907061B00A37002 /* RaitingsDetailView.swift in Sources */,
 				E141FE4A24CF5DAD0011CF6F /* MenuModel.swift in Sources */,
 				3BB3EC6B2906FF8D00A37002 /* DetailView.swift in Sources */,
+				3B90CFFB29079CB100B23643 /* XLargeCircularView.swift in Sources */,
+				3B90CFF929078DA300B23643 /* ComplicationControllerExtension.swift in Sources */,
+				3B90CFFD2907A1C700B23643 /* GraphicRectangleView.swift in Sources */,
 				E141FE2124CF41F70011CF6F /* HostingController.swift in Sources */,
 				3BB3EC6D2907056800A37002 /* Raitings.swift in Sources */,
+				3B90CFF829078DA300B23643 /* Stages.swift in Sources */,
 				E141FE4924CF5DAD0011CF6F /* RowView.swift in Sources */,
 				E141FE2724CF41F70011CF6F /* NotificationController.swift in Sources */,
+				3B90CFFF2907A53D00B23643 /* PizzaNotificationView.swift in Sources */,
 				E141FE2524CF41F70011CF6F /* ExtensionDelegate.swift in Sources */,
 				E141FE2924CF41F70011CF6F /* NotificationView.swift in Sources */,
+				3B90D0012907A60400B23643 /* OrderButton.swift in Sources */,
 				E141FE2B24CF41F70011CF6F /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
